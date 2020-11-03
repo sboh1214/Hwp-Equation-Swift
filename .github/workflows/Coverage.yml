@@ -21,10 +21,6 @@ jobs:
       run: swift test -v --enable-code-coverage
     - name: Prepare Codecov
       run: xcrun llvm-cov export -format="lcov" .build/debug/Hwp-Equation-SwiftPackageTests.xctest/Contents/MacOS/Hwp-Equation-SwiftPackageTests -instr-profile .build/debug/codecov/default.profdata > raw.lcov
-    - name: Install lcov
-      run: brew install lcov
-    - name: Extract
-      run: lcov -e raw.lcov "*Hwp-Equation-Swift/Sources*" -o info.lcov
     - name: Code Climate Coverage Action
       uses: paambaati/codeclimate-action@v2.7.4
       env:
