@@ -1,0 +1,25 @@
+included:
+  - Sources
+  - Tests
+  - Package.swift
+
+excluded:
+  - Carthage
+  - Pods
+  - .build
+  - Tests/HwpEquationTests/XCTestManifests.swift
+
+line_length: 100
+
+disabled_rules:
+  - todo
+
+type_body_length:
+  warning: 300
+  error: 400
+
+file_length:
+  warning: 500
+  error: 700
+
+reporter: "xcode"
